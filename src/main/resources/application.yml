@@ -1,0 +1,16 @@
+spring:
+  config:
+    import:
+      - 'optional:file:./env.properties'
+  datasource:
+    url: "jdbc:postgresql://streamit-streamit.l.aivencloud.com:28578/defaultdb?sslmode=require"
+    username: avnadmin
+    password: AVNS_zDoB5-bR4zPF-lJ4VQp
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 3600000
